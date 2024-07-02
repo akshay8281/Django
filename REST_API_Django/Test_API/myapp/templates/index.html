@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% if msg %}
+		<b style="color: green; ">{{msg}}</b>
+	{% endif %}
+<form name="insert" method="post" action="{% url 'index' %}">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td>Title</td>
+			<td><input type="text" name="title"></td>
+		</tr>
+		<tr>
+			<td>Author</td>
+			<td><input type="text" name="author"></td>
+		</tr>
+		<tr>
+			<td>ISBN</td>
+			<td><input type="text" name="isbn"></td>
+		</tr>
+		<tr>
+			<td>Publisher</td>
+			<td><input type="text" name="publisher"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="submit" name="action" value="INSERT">
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
