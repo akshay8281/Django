@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block class %}class="sub_page"{% endblock class %}
+
+{% block feedback_status %}active{% endblock feedback_status %}
+
+{% block main %}
+
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Book A Table
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="">
+              <div>
+                <input type="text" class="form-control" placeholder="Your Name" />
+              </div>
+              <div>
+                <textarea class="form-control" name="Description"required placeholder="Describe your experience here." id="" rows="10"></textarea>
+              </div>
+
+              <div>
+                <select class="form-control nice-select wide">
+                  <option value="" disabled selected>
+                    Please Give Us Rating ?
+                  </option>
+                  <option value="1">
+                    1
+                  </option>
+                  <option value="2">
+                    2
+                  </option>
+                  <option value="3">
+                    3
+                  </option>
+                  <option value="4">
+                    4
+                  </option>
+                  <option value="5">
+                    5
+                  </option>
+                </select>
+              </div>
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Select Image</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+             
+              <div class="btn_box">
+                <button>
+                 Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock main %}
